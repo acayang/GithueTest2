@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="useraction">
+  
+  <insert id="add" parameterType="userbean">
+  insert into t_user (username,password,nickname,id)
+  values(#{username},#{password},#{nickname},#{id});
+  </insert>
+  
+<!--   <update id="update" parameterType="userbean">
+  update t_user set username=#{username},password=#{password} where id=#{id};
+  </update>
+  
+  <delete id="delete" parameterType="int">
+  delete * from t_user where id=#{id};
+  </delete>
+  
+  <select id="select" parameterType="userbean">
+  select * from user where id=#{id};
+  </select>
+  
+  <select id="select_by_name" parameterType="string" resultType="com.func.pak.javaBean.UserBean">
+  select * from t_user where username=#{username};
+  </select> -->
+  
+  </mapper>
